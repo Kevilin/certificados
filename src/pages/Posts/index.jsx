@@ -24,7 +24,7 @@ const Posts = () => {
               colorScheme={selectedCategory === "" ? "brand.btn" : ""}
               onClick={() => setSelectedCategory("")}
             >
-              Todos
+              Todos ({data.length})
             </Button>
             <Button
               colorScheme={selectedCategory === "Backend" ? "brand.btn" : ""}

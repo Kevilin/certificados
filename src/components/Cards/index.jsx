@@ -43,8 +43,8 @@ const Cards = ({ post }) => {
           />
         </Box>
         <Text
-          minH="3.5rem"
-          maxH="3.5rem"
+          minH="4rem"
+          maxH="4rem"
           m=".5rem 0"
           as="h4"
           fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
