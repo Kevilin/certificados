@@ -18,7 +18,7 @@ const Cards = ({ post }) => {
   const { curso, url_certificado, url_imagem, categoria } = post.data().inputs;
 
   return (
-    <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1, y: -10 }}>
+    <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1, y: -10 }} p={2}>
       <Box
         borderRadius="xl"
         w={{ base: "100%", md: "23rem", lg: "100%" }}
@@ -26,7 +26,6 @@ const Cards = ({ post }) => {
         p={4}
         bg="brand.bg"
         overflow="hidden"
-        minH="25rem"
         boxShadow="xl"
       >
         <Box maxW="xl" overflow="hidden" rounded="20px" maxHeight="20rem">
@@ -35,7 +34,7 @@ const Cards = ({ post }) => {
             alt={`Imagem do curso ${curso}`}
             borderRadius="sm"
             loading="lazy"
-            h="30vh"
+            h={{ base: "12rem", md: "20rem", lg: "30vh" }}
             w="100%"
             objectFit="cover"
             style={{ scale: "1", transition: "0.5s ease-in-out" }}
@@ -48,9 +47,10 @@ const Cards = ({ post }) => {
           maxH="3.5rem"
           m=".5rem 0"
           as="h4"
-          fontSize="xl"
+          fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
           fontWeight="600"
-          w="33rem"
+          w="100%"
+          textAlign="center"
         >
           {curso}
         </Text>
