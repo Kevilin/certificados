@@ -15,7 +15,7 @@ import { VscGithub } from "react-icons/vsc";
 const MotionBox = motion(Box);
 
 const Cards = ({ post }) => {
-  const { curso, url_certificado, url_imagem } = post.data().inputs;
+  const { curso, url_certificado, url_imagem, categoria } = post.data().inputs;
 
   return (
     <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1, y: -10 }}>
@@ -44,8 +44,8 @@ const Cards = ({ post }) => {
           />
         </Box>
         <Text
-          minH="3.5rem"
-          maxH="3.5rem"
+          minH="5rem"
+          maxH="5rem"
           m=".5rem 0"
           as="h4"
           fontSize="xl"

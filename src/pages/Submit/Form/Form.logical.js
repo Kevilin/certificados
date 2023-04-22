@@ -23,7 +23,7 @@ export const HandleClick = () => {
   };
 
   const handleSubmit = (e) => {
-    const validate = inputs.curso === "" || inputs.url_certificado === "" || inputs.url_imagem === "";
+    const validate = inputs.curso === "" || inputs.url_certificado === "" || inputs.url_imagem === "" || inputs.categoria === "";
     e.preventDefault();
     if (validate) {
       return alert("Revise todos os campos");

@@ -3,6 +3,7 @@ import { Stack, Box, InputGroup, InputLeftAddon, Input, FormControl, FormLabel, 
 import { VStack, Spinner } from "@chakra-ui/react";
 import { MdCloudUpload } from "react-icons/md";
 import InputComp from "../../../components/Input";
+import SelectComp from "../../../components/Select";
 import { HandleClick } from "./Form.logical";
 import { nanoid } from "nanoid";
 import Confetti from "../../../components/Confetti";
@@ -30,6 +31,7 @@ const Form = () => {
       </Stack>
       <InputComp nameprop="url_certificado" label="URL do certificado" type="text" place="https://cursos.alura.com.br/certificate/..." value={handleChange} />
       <InputComp nameprop="url_imagem" label="URL da imagem" type="text" place="https://i.imgur.com/..." value={handleChange} />
+      <SelectComp title="Categoria" options={["Backend","Frontend", "Git", "Devops", "Banco de dados"]} name="categoria" handleChange={handleChange} />
 
       {toSubmit ? <Confetti /> : null}
       <Button role="button" disabled={uploadStatus && true} type="submit" mt={4} p={2} w="100%" bg="brand.btn" color="brand.bg" _hover={{ bg: "#789b8b" }}>
