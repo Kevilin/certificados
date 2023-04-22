@@ -44,15 +44,15 @@ const Cards = ({ post }) => {
           />
         </Box>
         <Text
-          minH="5rem"
-          maxH="5rem"
+          minH="3.5rem"
+          maxH="3.5rem"
           m=".5rem 0"
           as="h4"
           fontSize="xl"
           fontWeight="600"
           w="20rem"
         >
-          Curso: {`${curso}`}
+          {curso}
         </Text>
         <Divider mt={2} borderColor="gray" m=".5rem 0" />
 
