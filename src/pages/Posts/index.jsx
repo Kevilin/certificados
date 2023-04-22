@@ -3,10 +3,12 @@ import { Stack, Text, Grid, Box, Spinner, Center, Button } from "@chakra-ui/reac
 import { nanoid } from "nanoid";
 import { GetData } from "../Home/Hosts/Host.logical";
 import Cards from "../../components/Cards";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const Posts = () => {
   const { getDataFirebase, data } = GetData();
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [isSmallerThan960] = useMediaQuery("(max-width: 960px)");
 
   useEffect(() => {
     getDataFirebase();
@@ -17,7 +19,7 @@ const Posts = () => {
     <Stack bg="#2E2E2E" >
       <Box minHeight="100vh" mb={20}>
         <Stack direction="row" flexWrap="wrap" p={2} justifyContent="center">
-          <Stack direction="row" mb={4} spacing={4} p={2}>
+        <Stack direction="row" mb={4} spacing={4} p={2} display={isSmallerThan960 ? "none" : "flex"}>
             <Button
               colorScheme={selectedCategory === "" ? "brand.btn" : ""}
               onClick={() => setSelectedCategory("")}
