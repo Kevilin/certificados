@@ -4,7 +4,6 @@ import { nanoid } from "nanoid";
 import app from "../../../firebase/firebaseConfig";
 import { getFirestore } from "firebase/firestore";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
-const storage = getStorage(app);
 const db = getFirestore(app);
 
 export const HandleClick = () => {
@@ -12,11 +11,10 @@ export const HandleClick = () => {
   const [toSubmit, setToSubmit] = useState(false);
   const [redirect, setRedirect] = useState(false);
   const [inputs, setInputs] = useState({});
-  const [url_imagem, seturl_imagem] = useState([]);
 
   const firebaseAdd = async () => {
     try {
-      await addDoc(collection(db, "posts"), {
+      await addDoc(collection(db, "certificados"), {
         inputs,
       });
     } catch (e) {

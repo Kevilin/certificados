@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Divider, HStack, Text, Icon, Image, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  HStack,
+  Text,
+  Icon,
+  Image,
+  Button,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { BiGitRepoForked, BiCodeAlt } from "react-icons/bi";
 import { VscGithub } from "react-icons/vsc";
@@ -10,7 +18,7 @@ const Cards = ({ post }) => {
   const { curso, url_certificado, url_imagem } = post.data().inputs;
 
   return (
-<MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1, y: -10 }}>
+    <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1, y: -10 }}>
       <Box
         borderRadius="xl"
         w={{ base: "100%", md: "23rem", lg: "100%" }}
@@ -35,8 +43,16 @@ const Cards = ({ post }) => {
             rounded="10px"
           />
         </Box>
-        <Text m=".5rem 0" as="h4" fontSize="xl" fontWeight="600" w="20rem">
-          Curso: {curso}
+        <Text
+          minH="5rem"
+          maxH="5rem"
+          m=".5rem 0"
+          as="h4"
+          fontSize="xl"
+          fontWeight="600"
+          w="20rem"
+        >
+          Curso: {`${curso}`}
         </Text>
         <Divider mt={2} borderColor="gray" m=".5rem 0" />
 
@@ -55,7 +71,6 @@ const Cards = ({ post }) => {
         </a>
       </Box>
     </MotionBox>
-  
   );
 };
 
