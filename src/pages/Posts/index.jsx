@@ -45,12 +45,6 @@ const Posts = () => {
               Devops
             </Button>
             <Button
-              colorScheme={selectedCategory === "Git" ? "brand.btn" : ""}
-              onClick={() => setSelectedCategory("Git")}
-            >
-              Git
-            </Button>
-            <Button
               colorScheme={selectedCategory === "Banco de dados" ? "brand.btn" : ""}
               onClick={() => setSelectedCategory("Banco de dados")}
             >
