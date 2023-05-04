@@ -21,7 +21,12 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build --warning-level=error
+        run: |
+          if [ "${CI}" = "true" ]; then
+            npm run build --warning-level=error
+          else
+            npm run build --warning-level=warning
+          fi
 
       - name: Creating deployment artifact
         env:
