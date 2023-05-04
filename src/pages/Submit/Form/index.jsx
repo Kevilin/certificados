@@ -1,28 +1,15 @@
 import React, { useState } from "react";
-import { Stack, Box, InputGroup, InputLeftAddon, Input, FormControl, FormLabel, Textarea, Text, Icon, Button, Image, HStack } from "@chakra-ui/react";
-import { VStack, Spinner } from "@chakra-ui/react";
-import { MdCloudUpload } from "react-icons/md";
+import { Stack, Box, Text, Button, HStack } from "@chakra-ui/react";
+import { Spinner } from "@chakra-ui/react";
 import InputComp from "../../../components/Input";
 import SelectComp from "../../../components/Select";
 import { HandleClick } from "./Form.logical";
-import { nanoid } from "nanoid";
 import Confetti from "../../../components/Confetti";
 import { Navigate } from "react-router-dom";
 
 const Form = () => {
   const [uploadStatus, setUploadStatus] = useState(false);
   const { handleSubmit, handleChange, onFileChange, toSubmit, redirect } = HandleClick();
-  //Read inputs of fyle
-  const handleChanges = (e) => {
-    if (e.target.files.length === 0) {
-      return null;
-    }
-    onFileChange(e);
-    setUploadStatus(true);
-    setTimeout(() => {
-      setUploadStatus(false);
-    }, 4000);
-  };
 
   return (
     <Stack as="form" w="100%" p={{ md: "7", base: "0" }} spacing={6} onSubmit={handleSubmit}>

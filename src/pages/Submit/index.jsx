@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { Box, Stack, Text, Image } from "@chakra-ui/react";
+import { Box, Stack, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Form from "../Submit/Form";
 import { useUserAuth } from "../../context/userAuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const MotionBox = motion(Box);
 

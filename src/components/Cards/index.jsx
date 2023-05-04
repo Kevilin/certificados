@@ -2,16 +2,11 @@ import React from "react";
 import {
   Box,
   Divider,
-  HStack,
   Text,
-  Icon,
   Image,
   Button,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { BiGitRepoForked, BiCodeAlt } from "react-icons/bi";
-import { VscGithub } from "react-icons/vsc";
-
 const MotionBox = motion(Box);
 
 const Cards = ({ post }) => {

@@ -3,7 +3,6 @@ import { collection, addDoc } from "firebase/firestore";
 import { nanoid } from "nanoid";
 import app from "../../../firebase/firebaseConfig";
 import { getFirestore } from "firebase/firestore";
-import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 const db = getFirestore(app);
 
 export const HandleClick = () => {
