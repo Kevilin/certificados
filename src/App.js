@@ -1,5 +1,4 @@
 import React from "react";
-import { Center } from "@chakra-ui/layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Posts from "./pages/Posts";
 import Submit from "./pages/Submit";

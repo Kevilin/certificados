@@ -21,7 +21,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build --warning-level=warning
+        run: npm run build --no-optional
 
       - name: Creating deployment artifact
         env:
