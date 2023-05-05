@@ -29,7 +29,7 @@ const Submit = () => {
         </Box>
       </Stack>
     </MotionBox>:
-    navigate("/certificados/adm")
+    navigate("/adm")
     }
 </>
   );

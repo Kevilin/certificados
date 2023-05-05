@@ -15,7 +15,7 @@ const Login = () => {
     setError("");
     try {
       await logIn(email, password);
-      navigate("/certificados/add");
+      navigate("/add");
     } catch (err) {
       setError(err.message);
     }

@@ -20,9 +20,9 @@ const Footer = () => {
         <Stack direction="row" spacing={5} color="brand.btn">
           <Link to="/certificados">Inicio</Link>
           {usuario && usuario.email ? (
-            <Link to="/certificados/add">Admin</Link>
+            <Link to="/add">Admin</Link>
           ) : (
-            <Link to="/certificados/adm">Admin</Link>
+            <Link to="/adm">Admin</Link>
           )}
         </Stack>
       </Stack>

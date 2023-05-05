@@ -13,10 +13,10 @@ function App() {
       <UserAuthContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/certificados/" element={<Posts />} />
-            <Route path="/certificados/adm" element={<Login />} />
-            <Route path="/certificados/add" element={<Submit />} />
-            <Route path="/certificados/*" element={<Error />} />
+            <Route path="/" element={<Posts />} />
+            <Route path="/adm" element={<Login />} />
+            <Route path="/add" element={<Submit />} />
+            <Route path="/*" element={<Error />} />
           </Routes>
           <Footer />
         </BrowserRouter>
