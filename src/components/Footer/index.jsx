@@ -18,7 +18,7 @@ const Footer = () => {
       >
         <StackDivider p={1} />
         <Stack direction="row" spacing={5} color="brand.btn">
-          <Link to="/certificados">Inicio</Link>
+          <Link to="/">Inicio</Link>
           {usuario && usuario.email ? (
             <Link to="/add">Admin</Link>
           ) : (

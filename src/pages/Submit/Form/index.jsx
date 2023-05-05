@@ -37,7 +37,7 @@ const Form = () => {
       </Button>
       {redirect && (
         <Box>
-          <Navigate to="/certificados" />
+          <Navigate to="/" />
         </Box>
       )}
     </Stack>
