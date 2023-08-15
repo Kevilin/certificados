@@ -50,6 +50,12 @@ const Posts = () => {
             >
               Banco de dados
             </Button>
+            <Button
+              colorScheme={selectedCategory === "Engenharia de software" ? "brand.btn" : ""}
+              onClick={() => setSelectedCategory("Engenharia de software")}
+            >
+              Engenharia de software
+            </Button>
           </Stack>
           <Grid
             templateColumns={{
