@@ -54,7 +54,7 @@ const Posts = () => {
               colorScheme={selectedCategory === "Engenharia de software" ? "brand.btn" : ""}
               onClick={() => setSelectedCategory("Engenharia de software")}
             >
-              Engenharia de software
+              Eng. de software
             </Button>
           </Stack>
           <Grid

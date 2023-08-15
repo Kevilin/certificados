@@ -18,7 +18,7 @@ const Form = () => {
       </Stack>
       <InputComp nameprop="url_certificado" label="URL do certificado" type="text" place="https://cursos.alura.com.br/certificate/..." value={handleChange} />
       <InputComp nameprop="url_imagem" label="URL da imagem" type="text" place="https://i.imgur.com/..." value={handleChange} />
-      <SelectComp title="Categoria" options={["Backend","Frontend", "Git", "Devops", "Banco de dados"]} name="categoria" handleChange={handleChange} />
+      <SelectComp title="Categoria" options={["Backend","Frontend", "Git", "Devops", "Banco de dados", "Engenharia de software"]} name="categoria" handleChange={handleChange} />
 
       {toSubmit ? <Confetti /> : null}
       <Button role="button" disabled={uploadStatus && true} type="submit" mt={4} p={2} w="100%" bg="brand.btn" color="brand.bg" _hover={{ bg: "#789b8b" }}>
