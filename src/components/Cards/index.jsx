@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const MotionBox = motion(Box);
 
 const Cards = ({ post }) => {
-  const { curso, url_certificado, url_imagem, categoria } = post.data().inputs;
+  const { curso, url_certificado, path_imagem } = post;
 
   return (
     <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1, y: -10 }} p={2}>
@@ -25,7 +25,7 @@ const Cards = ({ post }) => {
       >
         <Box maxW="xl" overflow="hidden" rounded="20px" maxHeight="20rem">
           <Image
-            src={url_imagem}
+            src={path_imagem}
             alt={`Imagem do curso ${curso}`}
             borderRadius="sm"
             loading="lazy"

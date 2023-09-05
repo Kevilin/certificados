@@ -6,12 +6,12 @@ import Cards from "../../components/Cards";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Posts = () => {
-  const { getDataFirebase, data } = GetData();
+  const { getDataByAPI, data } = GetData();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [isSmallerThan960] = useMediaQuery("(max-width: 960px)");
 
   useEffect(() => {
-    getDataFirebase();
+    getDataByAPI();
     window.scrollTo({ top: 0 });
   }, []);
 
@@ -66,7 +66,7 @@ const Posts = () => {
             gap={8}
           >
             {data
-              .filter((post) => selectedCategory === "" || post.data().inputs.categoria === selectedCategory)
+              .filter((post) => selectedCategory === "" || post.categoria === selectedCategory)
               .map((post) => {
                 return <Cards key={nanoid()} post={post} width="30%" />;
               })}
