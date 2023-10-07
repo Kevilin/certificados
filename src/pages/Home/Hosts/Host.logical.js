@@ -7,7 +7,7 @@ const db = getFirestore(app);
 
 export const GetData = () => {
 
-  const urlBase = "https://admin.kmr.dev.br/api";
+  const urlBase = "https://admin-api.kmr.dev.br/api";
   const [data, setData] = useState([]);
 
   //Busca os certificados no firebase
